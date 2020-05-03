@@ -4,24 +4,37 @@ using namespace std;
 
 int main()
 {
-    int a = 4, b = 4;
+    int a, b, total_elems;
     int t1 = 1, t2 = 1, in1[a], in2[b];
 
-    cout << "Enter 4 values for first array" << endl << endl;
+// Input 1st array elements
+    cout << "Enter first array size: ";
+    cin >> a;
+    cout << "\nEnter values for first array\n";
 
-    for(int i=0; i < a; i++)                        //input 1st array elems
+    for(int i=0; i < a; i++)                        
     {
         cin >> in1[i];
     }
 
-    cout << "Enter 4 values for second array" << endl << endl;
+// Input 2nd array elements
+    cout << "Enter second array size: ";
+    cin >> b;
+    cout << "\nEnter values for second array\n";
 
-    for(int i=0; i < b; i++)                        //input 2nd array elems
+    for(int i=0; i < b; i++)                        
     {
         cin >> in2[i];
     }
 
-    for(int i=0; i < a; i++)                        //count unique elems for 1st arr
+// Initialise an array with size=total elements of both input arrays
+total_elems = a + b;
+int big[total_elems];
+
+
+
+// Count unique elems for 1st arr
+    for(int i=0; i < a; i++)                        
     {
         for(int j=i+1; j < a; j++)
         {
@@ -33,7 +46,8 @@ int main()
         }
     }
 
-    for(int i=0; i < b; i++)                        //count unique elems for 2nd arr
+// Count unique elems for 2nd arr
+    for(int i=0; i < b; i++)                        
     {
         for(int j=i+1; j < b; j++)
         {

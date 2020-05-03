@@ -1,39 +1,34 @@
-/*
- Write a Program  to find Maximum of three floating point numbers
-(should have double type variable also), three integers, three characters .
-*/
-
 #include <iostream>
 
 using namespace std;
 
-template <typename a>
-void max3(a n1, a n2, a n3)
+struct Rectangle
 {
-    a max;
-
-    if(n1 > n2)
-    {
-        if(n1 > n3)
-            max = n1;
-
-        else
-            max = n3;
-    }
-
-    else
-    {
-        if(n2 > n3)
-            max = n2;
-
-        else
-            max = n3;
-    }
-
-    cout << "max = " << max;
-}
+    float length, breadth;
+};
 
 int main()
 {
-   max3('a','s','w');
+    float area, perim, area1, perim1;
+    Rectangle r1, r2;
+
+    cout << "Enter length of first rectangle: ";
+    cin >> r1.length;
+
+    cout << "Enter breadth of first rectangle: ";
+    cin >> r1.breadth;
+
+    cout << "Enter length of second rectangle: ";
+    cin >> r2.length;
+
+    cout << "Enter breadth of second rectangle: ";
+    cin >> r2.breadth;
+
+    cout << "Area of first Rectangle is = " << r1.length*r1.breadth << endl;
+    cout << "Perimeter of first Rectangle is = " << 2*(r1.length+r1.breadth) << endl;
+
+    cout << "Area of second Rectangle is = " << r2.length*r2.breadth << endl;
+    cout << "Perimeter of second Rectangle is = " << 2*(r2.length+r2.breadth) << endl;
+
+    return 0;
 }
