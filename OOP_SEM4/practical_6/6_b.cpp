@@ -11,27 +11,25 @@ class newstring
 {
     private:
     string s;
+
     public:
-    newstring(string);
-    void operator ==(newstring);
+    newstring(string a)
+    {
+        s = a;
+    }
+
+    void operator ==(newstring a)
+    {   
+        if(s.compare(a.s) == 0)
+           cout << endl << "The strings are Equal";
+        else
+          cout << endl << "The strings are not equal";
+    }
 };
 
 int main()
 {
-    newstring a("hello"),b("hi");
+    newstring a("hello"), b("hi");
     a == b;
     return 0;
-}
-
-newstring:: newstring(string a)
-{
-    s = a;
-}
-
-void newstring:: operator ==(newstring a)
-{   
-    if(s.compare(a.s) == 0)
-        cout << endl << "The strings are Equal";
-    else
-        cout << endl << "The strings are not equal";
 }
