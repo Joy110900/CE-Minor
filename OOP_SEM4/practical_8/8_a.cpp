@@ -1,6 +1,6 @@
 /*
-WAP to sort out names stored in an array usingpointers. 
-Allocate Memory Dynamically (usingnew operator).
+WAP to sort out names stored in an array using pointers. 
+Allocate Memory Dynamically (using new operator).
 */
 #include<iostream>
 #include<string.h>

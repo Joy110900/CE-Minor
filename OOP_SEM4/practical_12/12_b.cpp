@@ -26,7 +26,7 @@ int main()
     file1.open(sfile);
     file2.open(tfile);
 
-    char varch,p=file1.get();
+    char varch, p=file1.get();
     
     while(!file1.eof())
     {
@@ -44,13 +44,15 @@ int main()
 
    file1.close();
    file2.close();
+
    cout << "\nTarget File Contents:\n";
+   
    file1.open(tfile);
    
    while(!file1.eof())
    {
         file1.get(varch);
-        cout<<varch;
+        cout << varch;
    }
 
    file1.close();
