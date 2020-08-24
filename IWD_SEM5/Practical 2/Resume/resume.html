@@ -1,64 +1,180 @@
 <!DOCTYPE html>
-<title>Resume Joy Mehta</title>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy's Resume</title>
+
     <style>
-        img {
-            border-radius: 100%;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .split {
+            height: 100%;
+            position: fixed;
+            padding: 20px;
+        }
+
+        .left {
+            left: 0;
+            width: 31%;
+            background-image: url(./Images/leftbackground.jpg);
+            background-size: auto 100%;
+            color: white;
+        }
+
+        .right {
+            right: 0;
+            width: 65%;
+            background-image: url(./Images/rightbackground.jpg);
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            color: white;
+        }
+
+        .centered {
+            position: absolute;
+            top: 17%;
+            left: 28%;
+        }
+
+        .textleft {
+            position: absolute;
+            top: 43%;
+            left: -15%;
+            text-align: center;
+        }
+
+        .centered img {
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        table {
+            position: absolute;
+            top: 69%;
+            left: 7%;
+            font-size: 120%;
+            text-align: left;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
     </style>
 </head>
 
 <body>
-        <h1><img src="photo.jpg" alt="photo" width="100" height="100" />Joy Mehta</h1>
-    
-    <p>      
-        <a href="https://www.linkedin.com/in/joymehta/"> Linkedin</a>
-          |  
-        <a href="https://github.com/Joy110900"> Github</a>
-          |  
-        <a href="joy110900@gmail.com"> Email</a>   
-          |  
-        Mobile: +91 9723457370
-    </p>
-    
-    <hr>
+    <div class="split left">
+        <div class="centered">
+            <img src="./Images/profilephoto.jpg" alt="Genius Photo">
+            <h1 style="font-size: 200%;">Joy Mehta</h1>
+        </div>
 
-    <table style="width: auto;" border="0">
-        <tr>
-            <th style="padding: 10px;">Summary</th>
-            <td>
-                Budding Roboticist, skilled in python, C++, ROS, Deep Learning with a keen interest in SLAM, Autonomous
-                Driving, Machine Learning, Artificial Intelligence
-            </td>
-        </tr>
-    </table>
+        <div>
+            <pre style="font-size: 120%;" class="textleft">
+            Budding roboticist, skilled in python, C++, ROS, 
+            Deep Learning with a keen interest in SLAM, Autonomous 
+            Driving, Machine Learning, Artificial Intelligense.
+            </pre>
+            <br>
 
-    <p> </p>
-    
-    <table border="0">
-        <tr>
-            <th rowspan="3" style="padding: 10px;">Education</th>
-            <td>Nirma University, India</td>
-            <th>July 2018 - Present</th>
-        </tr>
+            <table>
+                <tr>
+                    <th>Get in touch with me:-</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a style="color: white;" href="joy110900@gmail.com" target="__blank">Email</a>
+                    </td>
+                </tr>
 
-        <tr>
-            <td>Bachelor of Technology in Instrumentation and Control Engineering</td>
-        </tr>
+                <tr>
+                    <td>
+                        <a style="color: white;" href="https://www.linkedin.com/in/joymehta/"
+                            target="__blank">Linkedin</a>
+                    </td>
+                </tr>
 
-        <tr>
-            <td>Minor in Computer Engineering</td>
-        </tr>
-    </table>
+                <tr>
+                    <td>
+                        <a style="color: white;" href="https://github.com/Joy110900" target="__blank">Github</a>
+                    </td>
+                </tr>
 
-    <p> </p>
+                <tr>
+                    <td>
+                        Phone- +91 97234 57370
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-    <table border="1" style="width: 50%;">
-        <tr>
-            <th rowspan=style="padding: 10px;">Technical Skills</th>
+    </div>
 
-        </tr>
-        
-    </table>
+    <div class="split right">
+
+        <h1>Experience</h1>
+        <hr>
+        <ul>
+            <li><b style="font-size: 120%;">Team Member</b>, Robocon,</li>
+            <ul>
+                <li>Developed autonomous 4-legged robot using embedded systems, C, C++, AVR Studios</li>
+                <li>Designed electronic circuits using Proteus software</li>
+            </ul>
+            <br>
+            <li>Delivered an IEEE Seminar</li>
+            <ul>
+                <li>Assisted students in building their own line follower robot</li>
+            </ul>
+        </ul>
+
+        <h1>Education</h1>
+        <hr>
+        <li><b>Nirma University, India</b>,</li>
+        <ul>
+            <li>Bachelor of Technology in Instrumentation and Control Engineering</li>
+            <li>Minor in Computer Engineering</li>
+        </ul>
+
+        <h1>Technical Skills</h1>
+        <hr>
+        <li><b>Programming and Framework:</b></li>
+        <dd>Python, C++, PyTorch, Scikit-Learn, OpenCV, TensorFlow, ROS, C</dd>
+        <li>Softwares</li>
+        <dd>Git, MATLAB, VS Code, Proteus, AVR Studio, Multisim, Keil</dd>
+
+        <h1>Projects</h1>
+        <hr>
+        <li>Electronics Projects</li>
+        <ul>
+            <li>Developed a touch sensor circuit using a Darlington pair of transistors</li>
+            <li>Developed a triggering circuit using optocouplers and motor driver ICs</li>
+            <li>Designed a power supply circuit for the autonomous robot</li>
+        </ul>
+
+        <li>Embedded systems project</li>
+        <ul>
+            <li>Implemented communication protocols like UART, SPI, I2C on ATmega32, Atmega16, ATmega128
+                microcontrollers</li>
+            <li>Implemented wireless communication using Bluetooth module HC-05 between Intel 8051 microcontroller and
+                smartphone and displayed transferred data on LCD</li>
+            <li>Developed a line follower robot using AVR microcontroller, IR sensors and relay</li>
+        </ul>
+
+    </div>
+
 </body>
+
+</html>
