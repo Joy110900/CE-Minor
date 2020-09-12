@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS styles</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        .main {
+            background-color: black;
+            border: 20px green;
+            width: fit-content;
+            height: fit-content;
+            color: white;
+            margin: auto;
+            border-style: solid;
+        }
+
+        .box1:hover {
+            overflow: visible;
+        }
+
+        span.a:hover {
+            overflow: visible;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 style="color: white;">This webpage shows the use of text flow and box model.</h1>
+    </div>
+
+    <div class="box1">
+        <p style="text-overflow: clip;">
+            This box is an example of CSS box model. In this box the text is aligned center. The extra overflowed text
+            wont be showned in the box as the text overflow property is set to clip. The hidden text will be showed when
+            the mouse is hovered on it.
+        </p>
+    </div>
+
+    <div class="box2">
+        <p>
+            Now this box contains another box which is written in line in coninuos of the sentence.
+            <span style="width: 200px;" class="a">This is written in an inline block.</span> The full content in the inline block can be seen
+            when when hovered on the block.
+        </p>
+    </div>
+
+    <div class="box3">
+        <img src="download.jpeg" alt="blackhole">
+        <p style="overflow:scroll">
+            This block contains an image of black hole, an <span class="b">Inline Block</span> and some text with
+            overflow set to clip but it is set to visible so if the text is overflowed it will be seen.
+        </p>
+    </div>
+
+</body>
+
+</html>
