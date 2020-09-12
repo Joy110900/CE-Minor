@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextFlow & BoxModel</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        .main {
+            background-color: black;
+            border: 20px green;
+            width: fit-content;
+            height: fit-content;
+            color: white;
+            margin: auto;
+            border-style: solid;
+        }
+
+        .box1 {
+            background-color: black;
+            width: 40%;
+            height: 70px;
+            color: white;
+            border: 20px solid red;
+            margin: auto;
+            text-overflow: clip;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .box1:hover {
+            overflow: visible;
+        }
+
+        .box2 {
+            margin: auto;
+            background-color: lightgreen;
+            border: 20px black;
+            height: fit-content;
+            width: 60%;
+            border-style: solid;
+            margin-top: 30px;
+        }
+
+        span.a {
+            display: inline-block;
+            background-color: black;
+            width: 200px;
+            height: 20px;
+            color: white;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        span.a:hover {
+            overflow: visible;
+        }
+
+        .box3 {
+            margin: auto;
+            background-color: black;
+            border: 20px lightgreen;
+            height: 270px;
+            width: 55%;
+            border-style: solid;
+            margin-top: 30px;
+            color: white;
+            text-overflow: clip;
+            overflow: visible;
+        }
+
+        span.b {
+            display: inline-block;
+            background-color: white;
+            width: 100px;
+            height: 20px;
+            color: black;
+            text-overflow: clip;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 style="color: white;">This webpage shows the use of text flow and box model.</h1>
+    </div>
+
+    <div class="box1">
+        <p>
+            This box is an example of CSS box model. In this box the text is aligned center. The extra overflowed text
+            wont be showned in the box as the text overflow property is set to clip. The hidden text will be showed when
+            the mouse is hovered on it.
+        </p>
+    </div>
+
+    <div class="box2">
+        <p>
+            Now this box contains another box which is written in line in coninuos of the sentence. 
+            <span class="a">This is written in an inline block.</span> The full content in the inline block can be seen when when hovered on the block. 
+        </p>
+    </div>
+
+    <div class="box3">
+        <img src="download.jpeg" alt="blackhole">
+        <p>
+            This block contains an image of black hole, an <span class="b">Inline Block</span> and some text with overflow set to clip but it is set to visible so if the text is overflowed it will be seen.
+        </p>
+    </div>
+
+</body>
+
+</html>
