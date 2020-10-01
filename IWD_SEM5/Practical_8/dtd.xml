@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE document [
+    <!ELEMENT document (hotel)*>
+    <!ELEMENT hotel (id+, Name+, Star+, Facilities+, Address+, Distance+, Available+)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT Name (#PCDATA)>
+    <!ELEMENT Star (#PCDATA)>
+    <!ELEMENT Facilities (#PCDATA)>
+    <!ELEMENT Address (#PCDATA)>
+    <!ELEMENT Distance (#PCDATA)>
+    <!ELEMENT Available (#PCDATA)>
+]>
+
+<document>
+    <hotel>
+        <id>1</id>
+        <Name>Taj Hotel</Name>
+        <Star>5</Star>
+        <Facilities>Internet</Facilities>
+        <Address>Mumbai</Address>
+        <Distance>400</Distance>
+        <Available>Yes</Available>
+    </hotel>
+
+    <hotel>
+        <id>2</id>
+        <Name>Raddison</Name>
+        <Star>4</Star>
+        <Facilities>Internet
+        Gym
+        Parking
+        Restaurant</Facilities>
+        <Address>Jaipur</Address>
+        <Distance>500</Distance>
+        <Available>No</Available>
+    </hotel>
+
+    <hotel>
+        <id>3</id>
+        <Name>The Oberoi</Name>
+        <Star>5</Star>
+        <Facilities>Restaurant</Facilities>
+        <Address>Delhi</Address>
+        <Distance>350</Distance>
+        <Available>Yes</Available>
+    </hotel>
+
+    <hotel>
+        <id>4</id>
+        <Name>The Leela Palace</Name>
+        <Star>7</Star>
+        <Facilities>Parking</Facilities>
+        <Address>Mumbai</Address>
+        <Distance>400</Distance>
+        <Available>No</Available>
+    </hotel>
+</document>
