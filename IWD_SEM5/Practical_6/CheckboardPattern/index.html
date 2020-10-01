@@ -68,12 +68,28 @@
 
         function pyramid() {
             var i, j, str = "";
-            var n = 7;
+            var n = 6;
             for (i = 0; i < n; i++) {
-                for (j = 0; j < i; j++) {
-                    str = str + "*";
+                for (j = 0; j <= i; j++) {
+                    str = str + "* ";
                 }
                 str = str + "<br/>";
+            }
+            document.write(str);
+        }
+
+        function mirroredrighttraing() {
+            var i, j, m, str = "";
+            var n = 6;
+            for (i = 1; i <= n; i++) {
+
+                for (j = 1; j <= 2 * (n - i); j++) {
+                    str += "&nbsp";
+                }
+                for (j = 1; j <= i; j++) {
+                    str += "*";
+                }
+                str += "<br>";
             }
             document.write(str);
         }
@@ -107,6 +123,15 @@
             <h2>Pyramid</h2>
             <script>
                 pyramid();
+            </script>
+        </p>
+    </div>
+
+    <div class="a">
+        <p>
+            <h2>Mirrored Right Triangle</h2>
+            <script>
+                mirroredrighttraing();
             </script>
         </p>
     </div>
