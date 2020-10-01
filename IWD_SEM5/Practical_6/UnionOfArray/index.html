@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union of arrays</title>
+
+    <style>
+        body {
+            color: black;
+            background-color: aqua;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+		var x = 0;
+		var y = 0;
+		var array1 = [];
+		var array2 = [];
+
+		function array1_element() {
+			array1[x] = document.getElementById("array1").value;
+			x++;
+            document.getElementById("array1").innerHTML = "";
+            var i;
+			var out = "First Array --> ";
+			for (i = 0; i < x; i++) {
+				out = out + array1[i] + " | ";
+			}
+            document.getElementById("output1").innerHTML = out;
+            document.getElementById("array1").value = '';
+		}
+
+		function array2_element() {
+			array2[y] = document.getElementById("array2").value;
+			y++;
+            document.getElementById("array2").innerHTML = "";
+            var i;
+			var out = "Second Array --> ";
+			for (i = 0; i < y; i++) {
+				out = out + array2[i] + " | ";
+			}
+            document.getElementById("output2").innerHTML = out;
+            document.getElementById("array2").value = '';
+		}
+
+		function merged_array() {
+			var i, j, p, temp;
+			var o = 0;
+			var k = 0;
+			var r = new Array(p);
+			var u = new Array(k + 1);
+			var message = "The Merged Array is --> ";
+			p = array1.length + array2.length;
+
+			for (i = 0; i < array1.length; i++) {
+				r[i] = array1[i];
+			}
+			for (j = 0, i; i < p; i++, j++) {
+				r[i] = array2[j];
+			}
+
+			for (i = 0; i < p; i++) {
+				for (j = 0; j < (p - 1); j++) {
+					if (r[j] > r[j + 1]) {
+						temp = r[j];
+						r[j] = r[j + 1];
+						r[j + 1] = temp;
+					}
+				}
+			}
+
+			for (i = 0; i < p; i++) {
+				for (j = (i + 1), o = 0; j <= p; j++) {
+					if (r[i] == r[j]) {
+						o++;
+						continue;
+					} else {
+						u[k] = r[i];
+						k++;
+						break;
+					}
+				}
+				i = o + i;
+			}
+
+			for (i = 0; i < k; i++) {
+				message = message + u[i] + " ";
+			}
+			document.getElementById("output").innerHTML = message;
+		}
+	</script>
+</head>
+<body>
+	<h1>Merging Arrays</h1>
+
+	Enter number for first array: 
+    <input type="text" id="array1">
+    <button onclick="array1_element()">Add</button>
+    <div id="output1"></div><br>
+
+    Enter number for Second array: 
+    <input type="text" id="array2">
+    <button onclick="array2_element()">Add</button>
+    <div id="output2"></div><br>
+
+    <button onclick="merged_array()">Merge Arrays</button>
+    <br><br>
+	<div id="output"></div>
+
+</body>
+</html>
