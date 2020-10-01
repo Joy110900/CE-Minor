@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns</title>
+    <style>
+        body {
+            background-color: aqua;
+            color: black;
+            text-align: center;
+        }
+
+        .main {
+            background-color: black;
+            border: 20px green;
+            width: 80%;
+            height: fit-content;
+            color: white;
+            margin: auto;
+            border-style: solid;
+        }
+
+        div.a {
+            background-color: black;
+            border: 20px green;
+            width: 80%;
+            height: fit-content;
+            color: white;
+            border-style: solid;
+            margin: auto;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function pattern1() {
+            var i, j, str = "";
+            for (i = 0; i < 6; i++) {
+                for (j = 0; j < 6; j++) {
+                    str = str + "*";
+                }
+                str = str + "<br/>"
+
+                if (i % 2 == 0) {
+                    str = str + "&nbsp&nbsp&nbsp&nbsp";
+                }
+            }
+            document.write(str);
+        }
+
+        function mirroredrhombus() {
+            var i, j, str = "";
+            var n = 6;
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < 2 * n; j++) {
+                    if (j > i && j < i + n)
+                        str = str + "*";
+
+                    else
+                        str = str + "&nbsp";
+                }
+                str = str + "<br>";
+            }
+            document.write(str);
+        }
+
+        function pyramid() {
+            var i, j, str = "";
+            var n = 7;
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < i; j++) {
+                    str = str + "*";
+                }
+                str = str + "<br/>";
+            }
+            document.write(str);
+        }
+    </script>
+
+<body>
+    <div class="main">
+        <h1>Patterns</h1>
+    </div>
+
+    <div class="a">
+        <h2>Checkboard Pattern</h2>
+        <p>
+            <script>
+                pattern1();
+            </script>
+        </p>
+    </div>
+
+    <div class="a">
+        <p>
+            <h2>Mirrored Rhombus</h2>
+            <script>
+                mirroredrhombus();
+            </script>
+        </p>
+    </div>
+
+    <div class="a">
+        <p>
+            <h2>Pyramid</h2>
+            <script>
+                pyramid();
+            </script>
+        </p>
+    </div>
+
+</body>
+</head>
+
+</html>
