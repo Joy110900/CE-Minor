@@ -1,46 +1,39 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE document SYSTEM "hotel.dtd">
-<document>
-    <hotel>
-        <id>1</id>
-        <Name>Taj Hotel</Name>
-        <Star>5</Star>
-        <Facilities>Internet</Facilities>
-        <Address>Mumbai</Address>
-        <Distance>400</Distance>
-        <Available>Yes</Available>
-    </hotel>
+<!DOCTYPE hotel SYSTEM "hotel.dtd">
 
-    <hotel>
-        <id>2</id>
-        <Name>Raddison</Name>
-        <Star>4</Star>
-        <Facilities>Internet
-        Gym
-        Parking
-        Restaurant</Facilities>
-        <Address>Jaipur</Address>
-        <Distance>500</Distance>
-        <Available>No</Available>
-    </hotel>
+<hotel>
+    <id>1</id>
+    <Name>Taj Hotel</Name>
+    <Star>5</Star>
+    <Facilities>Internet</Facilities>
+    <Address>Mumbai</Address>
+    <Distance>400</Distance>
+    <Available>Yes</Available>
 
-    <hotel>
-        <id>3</id>
-        <Name>The Oberoi</Name>
-        <Star>5</Star>
-        <Facilities>Restaurant</Facilities>
-        <Address>Delhi</Address>
-        <Distance>350</Distance>
-        <Available>Yes</Available>
-    </hotel>
+    <id>2</id>
+    <Name>Raddison</Name>
+    <Star>4</Star>
+    <Facilities>Internet</Facilities>
+    <Facilities>Gym</Facilities>
+    <Facilities>Parking</Facilities>
+    <Facilities>Restaurant</Facilities>
+    <Address>Jaipur</Address>
+    <Distance>500</Distance>
+    <Available>No</Available>
 
-    <hotel>
-        <id>4</id>
-        <Name>The Leela Palace</Name>
-        <Star>7</Star>
-        <Facilities>Parking</Facilities>
-        <Address>Mumbai</Address>
-        <Distance>400</Distance>
-        <Available>No</Available>
-    </hotel>
-</document>
+    <id>3</id>
+    <Name>The Oberoi</Name>
+    <Star>5</Star>
+    <Facilities>Restaurant</Facilities>
+    <Address>Delhi</Address>
+    <Distance>350</Distance>
+    <Available>Yes</Available>
+
+    <id>4</id>
+    <Name>The Leela Palace</Name>
+    <Star>7</Star>
+    <Facilities>Parking</Facilities>
+    <Address>Mumbai</Address>
+    <Distance>400</Distance>
+    <Available>No</Available>
+</hotel>

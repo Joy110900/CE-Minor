@@ -1,5 +1,4 @@
-<!ELEMENT document (hotel)*>
-<!ELEMENT hotel (id+, Name+, Star+, Facilities+, Address+, Distance+, Available+)>
+<!ELEMENT hotel (id+, Name+, Star+, Facilities+, Address+, Distance+, Available+)*>
 <!ELEMENT id (#PCDATA)>
 <!ELEMENT Name (#PCDATA)>
 <!ELEMENT Star (#PCDATA)>
