@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("images/isroback.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    width: auto;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.logo {
+    width: fit-content;
+    float: left;
+    height: 150px;
+}
+
+.container {
+    width: auto;
+    margin: auto;
+}
+
+.transitions {
+    width: 100px;
+    height: 25px;
+    transition: width 2s;
+    overflow: hidden;
+}
+
+#div1 {
+    transition-timing-function: linear;
+}
+
+#div2 {
+    transition-timing-function: ease;
+    filter: invert(100%);
+}
+
+#div3 {
+    transition-timing-function: ease-in-out;
+    filter: drop-shadow(8px 8px 10px rgb(128, 0, 85));
+}
+
+.transitions:hover {
+    background: white;
+    width: 800px;
+    height: fit-content;
+}
+
+.blur {
+    filter: blur(4px);
+    transition-timing-function: linear;
+}
+
+.brightness {
+    filter: brightness(0.30);
+}
+
+.contrast {
+    filter: contrast(180%);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.huerotate {
+    filter: hue-rotate(90deg);
+}
+
+.invert {
+    filter: invert(70%);
+}
+
+.opacity {
+    filter: opacity(70%);
+}
+
+.saturate {
+    filter: saturate(7);
+}
+
+.sepia {
+    filter: sepia(70%);
+}
+
+.shadow {
+    filter: drop-shadow(8px 8px 10px red);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row::after {
+    content: "";
+    clear: all;
+    display: table;
+}

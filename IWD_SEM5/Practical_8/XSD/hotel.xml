@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+
+<hotel>
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="hotel.xsd">
+    
+    <id>1</id>
+    <Name>Taj Hotel</Name>
+    <Star>5</Star>
+    <Facilities>Internet</Facilities>
+    <Address>Mumbai</Address>
+    <Distance>400</Distance>
+    <Available>Yes</Available>
+
+    <id>2</id>
+    <Name>Raddison</Name>
+    <Star>4</Star>
+    <Facilities>Internet</Facilities>
+    <Facilities>Gym</Facilities>
+    <Facilities>Parking</Facilities>
+    <Facilities>Restaurant</Facilities>
+    <Address>Jaipur</Address>
+    <Distance>500</Distance>
+    <Available>No</Available>
+
+    <id>3</id>
+    <Name>The Oberoi</Name>
+    <Star>5</Star>
+    <Facilities>Restaurant</Facilities>
+    <Address>Delhi</Address>
+    <Distance>350</Distance>
+    <Available>Yes</Available>
+
+    <id>4</id>
+    <Name>The Leela Palace</Name>
+    <Star>7</Star>
+    <Facilities>Parking</Facilities>
+    <Address>Mumbai</Address>
+    <Distance>400</Distance>
+    <Available>No</Available>
+</hotel>

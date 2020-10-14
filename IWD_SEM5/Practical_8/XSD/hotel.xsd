@@ -1,0 +1,15 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hotel">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element type="xs:int" name="id"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:int" name="Star"/>
+        <xs:element type="xs:string" name="Facilities"/>
+        <xs:element type="xs:string" name="Address"/>
+        <xs:element type="xs:int" name="Distance"/>
+        <xs:element type="xs:string" name="Available"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
