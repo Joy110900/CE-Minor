@@ -18,14 +18,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <th>Available</th>
       </tr>
       <xsl:for-each select="hotellist/hotel">
+      <xsl:sort select="Star"/>
         <tr>
-          <td><xsl:value-of select="id"/></td>
-          <td><xsl:value-of select="Name"/></td>
-          <td><xsl:value-of select="Star"/></td>
-          <td><xsl:value-of select="Facilities"/></td>
-          <td><xsl:value-of select="Address"/></td>
-          <td><xsl:value-of select="Distance"/></td>
-          <td><xsl:value-of select="Available"/></td>
+          <td bgcolor="#90F61"><xsl:value-of select="id"/></td>
+          <td bgcolor="#F5EE1"><xsl:value-of select="Name"/></td>
+          <td bgcolor="#29E7FB"><xsl:value-of select="Star"/></td>
+          <td bgcolor="#D424F"><xsl:value-of select="Facilities"/></td>
+          <td bgcolor="#7DBBF2"><xsl:value-of select="Address"/></td>
+          <td bgcolor="#E74C3C"><xsl:value-of select="Distance"/></td>
+          <td bgcolor="#F6BE1"><xsl:value-of select="Available"/></td>
         </tr>
       </xsl:for-each>
     </table>
