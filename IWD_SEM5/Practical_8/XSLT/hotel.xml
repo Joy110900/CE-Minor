@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="hotel.xsl" ?>
+<!DOCTYPE hotellist SYSTEM "hotel.dtd">
+
+<hotellist>
+    <hotel>
+        <id>1</id>
+        <Name>Taj Hotel</Name>
+        <Star>5</Star>
+        <Facilities>Internet</Facilities>
+        <Address>Mumbai</Address>
+        <Distance>400</Distance>
+        <Available>Yes</Available>
+    </hotel>
+
+    <hotel>
+        <id>2</id>
+        <Name>Raddison</Name>
+        <Star>4</Star>
+        <Facilities>Internet, Gym, Parking, Restaurant</Facilities>
+        <Address>Jaipur</Address>
+        <Distance>500</Distance>
+        <Available>No</Available>
+    </hotel>
+
+    <hotel>
+        <id>3</id>
+        <Name>The Oberoi</Name>
+        <Star>5</Star>
+        <Facilities>Restaurant</Facilities>
+        <Address>Delhi</Address>
+        <Distance>350</Distance>
+        <Available>Yes</Available>
+    </hotel>
+
+    <hotel>
+        <id>4</id>
+        <Name>The Leela Palace</Name>
+        <Star>7</Star>
+        <Facilities>Parking</Facilities>
+        <Address>Mumbai</Address>
+        <Distance>400</Distance>
+        <Available>No</Available>
+    </hotel>
+
+</hotellist>
