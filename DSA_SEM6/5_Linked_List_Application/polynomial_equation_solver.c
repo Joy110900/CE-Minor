@@ -120,8 +120,7 @@ void add_poly(struct Node **poly1, struct Node **poly2, struct Node **answer)
         }
         p2 = p2->next;
     }
-}    free(last);
-
+}
 
 //Appends data to end
 //Passing pointer to pointer of head so we can update head in the function
