@@ -28,16 +28,16 @@ void main()
 
 int check_brackets(char s[], int len)
 {
-    char stack[50];
+    char stack[50];             //Initialize empty stack
 
-    for(int i=0; i<len-1; i++)
+    for(int i=0; i<len-1; i++)  //Traverse through array of brackets
     {
         if(top == -1)           //If stack is empty
-            push(s[i], stack);
+            push(s[i], stack);  //append bracket to stack
 
         else
         {
-            if(peek_top(stack) == get_reversed_brackets(s[i]))
+            if(peek_top(stack) == get_reversed_brackets(s[i]))  //If the top element of stack is reverse bracket of input bracket then pop from stack
                 pop(stack);
 
             else
@@ -45,7 +45,7 @@ int check_brackets(char s[], int len)
         }
     }
 
-    if(top == -1)
+    if(top == -1)   //if stack is empty then the brackets are closed properly
         return 1;
 
     else
@@ -54,6 +54,7 @@ int check_brackets(char s[], int len)
 
 char get_reversed_brackets(char b)
 {
+    //returning reverse of input bracket
     switch (b)
     {
         case '(':
