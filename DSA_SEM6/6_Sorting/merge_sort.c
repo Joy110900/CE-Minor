@@ -17,14 +17,13 @@ void main()
     printf("Enter no. of elements: ");
     scanf("%d", &n);
     int rand_arr[n];
-
     srand(time(0));
     for(int i=0; i<n; i++)
     {
         rand_arr[i] = rand()%100;
     }
 
-    //Sorting using quick sort
+    //Sorting using merge sort
     printf("Unsorted Array");
     print_array(rand_arr, n);
     merge_sort(rand_arr, 0, n-1);
@@ -38,42 +37,45 @@ void merge(int arr[], int l, int m, int r)
 	int n1 = m - l + 1;
 	int n2 = r - m;
 
-	/* create temp arrays */
+	//sub arrays
 	int L[n1], R[n2];
 
-	/* Copy data to temp arrays L[] and R[] */
 	for (i = 0; i < n1; i++)
 		L[i] = arr[l + i];
 	for (j = 0; j < n2; j++)
 		R[j] = arr[m + 1 + j];
 
-	/* Merge the temp arrays back into arr[l..r]*/
-	i = 0; // Initial index of first subarray
-	j = 0; // Initial index of second subarray
-	k = l; // Initial index of merged subarray
-	while (i < n1 && j < n2) {
-		if (L[i] <= R[j]) {
+	//merge the sub arrays
+	i = 0; 	//left sub array first index
+	j = 0; 	//right sub array first index
+	k = l;	//merged array first index
+
+	while (i < n1 && j < n2) //loop until end of array
+	{
+		if (L[i] <= R[j]) 		//if left subarray elem is smaller, add it to final array
+		{
 			arr[k] = L[i];
 			i++;
 		}
-		else {
+		else 
+		{
 			arr[k] = R[j];
 			j++;
 		}
 		k++;
 	}
 
-	/* Copy the remaining elements of L[], if there
-	are any */
-	while (i < n1) {
+	//copying left out element from left subarray to array
+	while (i < n1) 
+	{
 		arr[k] = L[i];
 		i++;
 		k++;
 	}
 
-	/* Copy the remaining elements of R[], if there
-	are any */
-	while (j < n2) {
+	//copying left out element from right subarray to array
+	while (j < n2) 
+	{
 		arr[k] = R[j];
 		j++;
 		k++;
