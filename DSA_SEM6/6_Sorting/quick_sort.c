@@ -8,28 +8,29 @@ Write a program to implement Quick sort for sorting a given set of integers in a
 
 void quick_sort(int [], int, int);
 void swap(int *, int *);
-void print_array(int []);
+void print_array(int [], int);
 int partition(int [], int, int);
 
-//Max array size
-int max = 20;
 
 void main()
 {
     //Initializing array to sort with random numbers
-    int rand_arr[max];
+    int n;
+    printf("Enter no. of elements: ");
+    scanf("%d", &n);
+    int rand_arr[n];
     srand(time(0));
-    for(int i=0; i<max; i++)
+    for(int i=0; i<n; i++)
     {
         rand_arr[i] = rand()%100;
     }
 
     //Sorting using quick sort
     printf("Unsorted Array\n");
-    print_array(rand_arr);
-    quick_sort(rand_arr, 0, max-1);
+    print_array(rand_arr, n);
+    quick_sort(rand_arr, 0, n-1);
     printf("Sorted Array\n");
-    print_array(rand_arr);    
+    print_array(rand_arr, n);    
 }
 
 //function to quick sort an array in ascending order
@@ -85,10 +86,10 @@ void swap(int *a, int *b)
 }
 
 //function to print array
-void print_array(int arr[])
+void print_array(int arr[], int n)
 {
     printf("\n");
-    for(int i=0; i<max; i++)
+    for(int i=0; i<n; i++)
     printf("%d\t", arr[i]);
     printf("\n");
 }
