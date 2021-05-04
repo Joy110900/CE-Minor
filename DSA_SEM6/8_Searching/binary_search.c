@@ -8,19 +8,25 @@ void print_array(int arr[], int size);
 
 void main()
 {
-    int key, index, max=16;
-    int sorted_arr[max];
-    
-    for(int i=0; i<max; i++)
-        sorted_arr[i] = i;
+    int key, index, n;
+
+    printf("Enter no. of elements: ");
+    scanf("%d", &n);
+
+    int sorted_arr[n];
+    printf("\nEnter Sorted Array:\n");
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &sorted_arr[i]);
+    }
 
     printf("Entered Sorted Array is:\n");
-    print_array(sorted_arr, max);
+    print_array(sorted_arr, n);
 
     printf("Enter key to search in array: ");
     scanf("%d", &key);
 
-    index = binary_search(sorted_arr, 0, max, key);
+    index = binary_search(sorted_arr, 0, n-1, key);
 
     if(index == -1)
         printf("%d Element not found in the given array\n", key);
